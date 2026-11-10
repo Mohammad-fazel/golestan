@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حسابداری رستوران سنتی گلستان</title>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#7b1e1e">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e6d3a8;--c:#f7ebce;--t:#3a2414;--a:#7b1e1e;--m:#7a5a3a;--b:#c9a96a;--g:#2f5d34;--gold:#b8892e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241810;--c:#33241a;--t:#f3e3c3;--m:#c4a77a;--b:#5a4128;--a:#d4574a;--g:#7bbf7f;--gold:#d9a94a}}
+:root[data-theme="dark"]{--bg:#241810;--c:#33241a;--t:#f3e3c3;--m:#c4a77a;--b:#5a4128;--a:#d4574a;--g:#7bbf7f;--gold:#d9a94a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle,#8a5a1a22 1.5px,transparent 2px) 0 0/22px 22px,var(--bg);color:var(--t);font:15px Vazirmatn,Tahoma,sans-serif}
+header{background:linear-gradient(#8e2424,#5e1414);color:#f6e2b0;border-bottom:4px double #d9a94a;padding:10px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+header h1{font:25px Lalezar,Vazirmatn,serif;margin:0;flex:1;text-shadow:1px 1px #0007}
+nav button{background:#0003;color:#f6e2b0;border:1px solid #d9a94a!important;border:0;border-radius:8px;padding:7px 12px;font:inherit;margin-inline-start:4px}
+nav button.on{background:#d9a94a;color:#4a1010}
+main{max-width:1100px;margin:auto;padding:12px}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.tb{background:var(--c);border:3px double var(--gold);border-radius:20px 20px 8px 8px;box-shadow:0 3px 0 #0003;padding:16px 6px;text-align:center;font:inherit;color:var(--t);cursor:pointer}
+.tb b{display:block;font:23px Lalezar,Vazirmatn,serif;color:var(--a)}.tb.busy{border-color:var(--a);background:#7b1e1e26}
+.row{display:flex;gap:12px;flex-wrap:wrap}.col{flex:1 1 340px;min-width:0}
+.card{background:var(--c);border:2px solid var(--gold);border-radius:10px;box-shadow:inset 0 0 0 3px var(--c),inset 0 0 0 4px var(--b);padding:10px;margin-bottom:10px}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px}
+.chips button{white-space:nowrap;border:1px solid var(--b);background:var(--c);color:var(--t);border-radius:20px;padding:6px 12px;font:inherit}
+.chips button.on{background:var(--a);color:#f6e2b0;border-color:var(--gold)}
+.it{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-top:8px}
+.it button{background:var(--bg);border:1px solid var(--b);border-radius:10px;padding:10px 6px;font:inherit;color:var(--t);min-height:64px}
+.it small{display:block;color:var(--m)}
+.ln{display:flex;align-items:center;gap:6px;padding:7px 0;border-bottom:1px dashed var(--b)}
+.ln span{flex:1}.ln button,.q{width:32px;height:32px;border-radius:8px;border:1px solid var(--b);background:var(--bg);color:var(--t);font:inherit;font-size:18px}
+.bt{border:0;border-radius:10px;padding:11px 14px;font:inherit;color:#fff;background:var(--a);margin:3px 0}.bt.g2{background:var(--g)}.bt.s{background:var(--m)}
+input,select{font:inherit;padding:8px;border:1px solid var(--b);border-radius:8px;background:var(--c);color:var(--t);max-width:100%}
+.tot{font-size:20px;font-weight:700;display:flex;justify-content:space-between;padding:8px 0}
+table{width:100%;border-collapse:collapse}td,th{padding:6px;border-bottom:1px solid var(--b);text-align:right}
+footer{text-align:center;color:var(--m);font-size:12px;padding:16px}footer a{color:var(--a)}
+#inv{display:none}
+@media print{body>*:not(#inv){display:none!important}#inv{display:block}}
+#ov{position:fixed;inset:0;background:#000b;z-index:50;overflow:auto;padding:max(10px,env(safe-area-inset-top)) 10px 24px;display:flex;justify-content:center}
+.mb{max-width:100%}.bar{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
+.iv{width:560px;background:#f3e1b4;padding:14px;color:#3a2414;font-family:Vazirmatn,Tahoma,sans-serif;direction:rtl;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.iv *{box-sizing:border-box}
+.iv .fr{position:relative;border:4px double #a9781f;outline:1.5px solid #7b1e1e;outline-offset:3px;padding:22px 24px;background:#fbf1d8;margin:4px}
+.iv .c{position:absolute;color:#a9781f;font-style:normal;font-size:18px;background:#fbf1d8;line-height:1}
+.iv .c1{top:-11px;right:-11px}.iv .c2{top:-11px;left:-11px}.iv .c3{bottom:-11px;right:-11px}.iv .c4{bottom:-11px;left:-11px}
+.iv .hd{text-align:center;border-bottom:2px solid #7b1e1e;padding-bottom:10px}
+.iv .orn{color:#a9781f;font-size:13px}
+.iv h2{font:38px/1.4 Lalezar,Vazirmatn,serif;color:#7b1e1e;margin:2px 0}
+.iv .sb{color:#7a5a3a;font-size:13px}
+.iv .tt{display:inline-block;margin-top:8px;padding:3px 22px;border-radius:20px;background:#7b1e1e;color:#f6e2b0;font-weight:700}
+.iv .mt{display:flex;justify-content:space-between;padding:10px 0;font-size:13px;border-bottom:1px dashed #a9781f}
+.iv .it2{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+.iv .it2 th{background:#7b1e1e;color:#f6e2b0;padding:6px 4px;text-align:center;border:0}
+.iv .it2 td{padding:6px 4px;text-align:center;border-bottom:1px solid #d8bf86}
+.iv .it2 td.nm{text-align:right}.iv .it2 tr:nth-child(even) td{background:#a9781f18}
+.iv .sm{margin-top:12px;font-size:14px}.iv .sm div{display:flex;justify-content:space-between;padding:4px 6px}
+.iv .sm .fn{margin-top:6px;border:3px double #7b1e1e;background:#7b1e1e12;font:22px Lalezar,Vazirmatn,serif;color:#7b1e1e;padding:8px 12px}
+.iv .pm{text-align:center;margin-top:8px;font-size:13px}
+.iv .ft{text-align:center;margin-top:14px;font-size:13px;color:#5a3a1a}
+#dl{position:fixed;inset:0;background:#000b;z-index:60;display:flex;align-items:center;justify-content:center;padding:14px}.dlb{background:var(--c);color:var(--t);border:2px solid var(--gold);border-radius:12px;padding:16px;max-width:380px;width:100%;display:flex;flex-direction:column;gap:10px}.dlb input{width:100%}
+@page{size:A5;margin:0}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script></head><body>
+<header><h1>❖ رستوران سنتی گلستان ❖</h1><nav id="nv"></nav></header>
+<main id="app"></main>
+<footer>تهیه شده توسط مهندس محمد فاضل درویشی<br><a href="https://mohammad-fazel.github.io/Fazel/" target="_blank" rel="noopener">mohammad-fazel.github.io/Fazel</a></footer>
+<div id="inv"></div>
+<script>
+const F=n=>(+n||0).toLocaleString('fa-IR'),K='golestan_v1',$=s=>document.querySelector(s);
+const S=`کباب|خوراک کباب کوبیده (۱۷۵ گرم)|500
+کباب|خوراک میکس|890
+کباب|خوراک کوبیده تک سیخ|250
+کباب|خوراک جوجه (۲۵۰ گرم)|450
+کباب|خوراک جوجه ترش|480
+کباب|چنجه مخصوص گلستان|800
+کباب|کتف و بال کبابی (۳۵۰ گرم)|430
+کباب|جگر گوسفندی|150
+کباب|دل گوسفندی|150
+کباب|قلوه گوسفندی|150
+کباب|دنبه گوسفندی|100
+چلو|چلو کباب کوبیده|600
+چلو|چلو میکس|630
+چلو|چلو کتف و بال کبابی|550
+چلو|چلو جوجه مخصوص|580
+چلو|چلو ساده ایرانی|180
+فست‌فود|پیتزا مخصوص گلستان|490
+فست‌فود|پیتزا مخلوط|490
+فست‌فود|پیتزا قارچ و گوشت|550
+فست‌فود|پیتزا قارچ و مرغ|570
+فست‌فود|اسنک تنوری مخصوص گلستان|500
+فست‌فود|اسنک تنوری مخلوط|390
+فست‌فود|اسنک مرغ|400
+فست‌فود|سیب‌زمینی تنوری قارچ و پنیر|350
+فست‌فود|هات چیپس تنوری|250
+فست‌فود|سیب‌زمینی سرخ‌کرده|200
+فست‌فود|بلال تنوری|150
+فست‌فود|بلال کبابی|150
+فست‌فود|سوسیس تخم‌مرغ|250
+فست‌فود|املت مخصوص قارچ و پنیر|270
+فست‌فود|املت معمولی|250
+فست‌فود|قارچ کبابی|100
+فست‌فود|همبرگر|0
+فست‌فود|سالاد کاهو|80
+فست‌فود|کشک بادمجان|295
+نوشیدنی گرم|چای فلاسک (۴ نفره)|150
+نوشیدنی گرم|چای قوری (۲ نفره)|100
+نوشیدنی گرم|سرویس سماور ذغالی (۸ نفره)|250
+نوشیدنی گرم|اسپرسو تک|60
+نوشیدنی گرم|اسپرسو دبل|80
+نوشیدنی گرم|کاپوچینو|0
+نوشیدنی گرم|قهوه|0
+نوشیدنی سرد|نوشابه خانواده|120
+نوشیدنی سرد|نوشابه قوطی|70
+نوشیدنی سرد|نوشابه کوچک|65
+نوشیدنی سرد|نوشابه شیشه‌ای|70
+نوشیدنی سرد|لیموناد شیشه‌ای|70
+نوشیدنی سرد|اسپرایت|70
+نوشیدنی سرد|دلستر|100
+نوشیدنی سرد|دوغ خانواده محلی|110
+نوشیدنی سرد|دوغ کوچک محلی|70
+نوشیدنی سرد|ماست|70
+نوشیدنی سرد|زیتون|70
+دسر|کیک خانگی (هویج گردو)|0
+دسر|انواع کیک|135
+دسر|انواع پفک|80
+دسر|چیپس با تنوع طعم|100`;
+const HK='نعنا،بلوبری،موهیتو،هندوانه نعنا،دو سیب آلبالو،دو سیب یخ،دو سیب شلیل،دو سیب،هندوانه یخ،پرتقال خامه،انگور یخ،پرتقال نعنا،تمشک بستنی،آدامس دارچین،آدامس نعنا،شبهای اربیل،شبهای مسکو،شیخ مانی،حریم سلطان،شراب،لیدی،لاو';
+function seed(){let i=0;const a=S.split('\n').map(l=>{const[c,n,p]=l.split('|');return{i:++i,c,n,p:p*1000}});
+HK.split('،').forEach(n=>{a.push({i:++i,c:'قلیان چوبی',n:'قلیان چوبی '+n,p:150000});a.push({i:++i,c:'قلیان فلزی',n:'قلیان فلزی '+n,p:270000})});return a}
+let D;try{D=JSON.parse(localStorage.getItem(K))}catch(e){}
+if(!D)D={m:seed(),o:{},d:{},h:[],n:1};
+if(D.m.some(x=>x.c=='قلیان')){const mx=Math.max(...D.m.map(x=>x.i));D.m=D.m.filter(x=>x.c!='قلیان').concat(seed().filter(x=>x.c.startsWith('قلیان')).map((x,k)=>({...x,i:mx+1+k})));sv()}
+const sv=()=>{try{localStorage.setItem(K,JSON.stringify(D))}catch(e){}};
+let V='t',T=null,C='کباب',Q='',RD=new Date().toLocaleDateString('en-CA');
+const sub=t=>(D.o[t]||[]).reduce((s,l)=>s+l.q*l.p,0),net=t=>Math.max(0,sub(t)-(+D.d[t]||0));
+const cats=()=>[...new Set(D.m.map(x=>x.c))];
+const td=()=>new Date().toLocaleDateString('en-CA'),go=(v,t)=>{V=v;T=t||null;if(v=='r')RD=td();render()};
+function add(i){const x=D.m.find(m=>m.i==i),o=D.o[T]||(D.o[T]=[]),l=o.find(z=>z.i==i);l?l.q++:o.push({i,n:x.n,p:x.p,q:1});sv();render()}
+function chg(i,d){const o=D.o[T],l=o.find(z=>z.i==i);l.q+=d;if(l.q<1)o.splice(o.indexOf(l),1);if(!o.length)delete D.o[T];sv();render()}
+function setP(i,v){const l=D.o[T].find(z=>z.i==i);l.p=+v||0;sv();render()}
+function disc(v){D.d[T]=+v||0;sv();render()}
+const cur=()=>({no:D.n,t:T,at:Date.now(),l:D.o[T]||[],s:sub(T),d:Math.min(+D.d[T]||0,sub(T))});
+function render(){
+$('#nv').innerHTML=[['t','میزها'],['r','امروز'],['d','روزها'],['c','نسیه'],['m','منو']].map(([k,n])=>`<button class="${V==k||(V=='o'&&k=='t')?'on':''}" onclick="go('${k}')">${n}</button>`).join('');
+const A=$('#app');if('rdc'.includes(V)){A.innerHTML=V=='d'?daysV():V=='c'?nasV():dayV();return}
+if(V=='t'){A.innerHTML='<div class="g">'+Array.from({length:12},(_,i)=>{const t=i+1,n=(D.o[t]||[]).length;return`<button class="tb ${n?'busy':''}" onclick="go('o',${t})"><b>میز ${F(t)}</b>${n?F(net(t))+' تومان<br><small>'+F(n)+' قلم</small>':'<small>خالی</small>'}</button>`}).join('')+'</div>'}
+else if(V=='o'){const L=D.o[T]||[],its=D.m.filter(x=>Q?x.n.includes(Q):x.c==C);
+A.innerHTML=`<div class="row"><div class="col"><div class="card"><input id="q" placeholder="جستجوی آیتم…" value="${Q}" style="width:100%" oninput="Q=this.value;render();$('#q').focus()"><div class="chips" style="margin-top:8px">${cats().map(c=>`<button class="${c==C&&!Q?'on':''}" onclick="Q='';C='${c}';render()">${c}</button>`).join('')}</div><div class="it">${its.map(x=>`<button onclick="add(${x.i})">${x.n}<small>${x.p?F(x.p)+' ت':'قیمت؟'}</small></button>`).join('')}</div></div></div>
+<div class="col"><div class="card"><div style="display:flex;justify-content:space-between"><b>میز ${F(T)}</b><button class="bt s" onclick="go('t')">← بازگشت</button></div>
+${L.length?L.map(l=>`<div class="ln"><span>${l.n}</span><input type="number" value="${l.p}" style="width:90px" onchange="setP(${l.i},this.value)"><button onclick="chg(${l.i},-1)">−</button><b>${F(l.q)}</b><button onclick="chg(${l.i},1)">+</button></div>`).join(''):'<p style="color:var(--m)">هنوز سفارشی ثبت نشده</p>'}
+<div class="ln"><span>تخفیف (تومان)</span><input type="number" value="${D.d[T]||''}" style="width:110px" onchange="disc(this.value)"></div>
+<div class="tot"><span>مبلغ قابل پرداخت</span><span>${F(net(T))}</span></div>
+<button class="bt s" onclick="pr(cur())">📄 فاکتور / PDF</button> <button class="bt g2" onclick="pay('نقد')">💵 تسویه نقد</button> <button class="bt g2" onclick="pay('کارت')">💳 تسویه کارت</button> <button class="bt" onclick="nas()">📒 نسیه</button> <button class="bt s" onclick="clr()">🗑 خالی کردن</button></div></div></div>`}
+else if(V=='r'){const h=D.h.filter(x=>x.day==RD),f=m=>h.filter(x=>x.m==m).reduce((s,x)=>s+x.s-x.d,0);
+A.innerHTML=`<div class="card"><input type="date" value="${RD}" onchange="RD=this.value;render()"><div class="tot"><span>فروش روز</span><span>${F(f('نقد')+f('کارت'))} تومان</span></div>نقد: ${F(f('نقد'))} — کارت: ${F(f('کارت'))} — تعداد فاکتور: ${F(h.length)}</div>
+<div class="card"><table>${h.map(x=>`<tr><td>#${F(x.no)}</td><td>میز ${F(x.t)}</td><td>${F(x.s-x.d)}</td><td>${x.m}</td><td><button class="q" onclick="pr(D.h.find(z=>z.no==${x.no}))">🖨</button></td></tr>`).join('')||'<tr><td>فاکتوری نیست</td></tr>'}</table></div>
+<div class="card"><button class="bt s" onclick="bk()">⬇ دریافت نسخه پشتیبان</button> <label class="bt s" style="display:inline-block">⬆ بازیابی<input type="file" hidden accept=".json" onchange="rs(this.files[0])"></label><p style="color:var(--m);font-size:13px">اطلاعات روی همین دستگاه ذخیره می‌شود؛ برای انتقال به دستگاه دیگر از پشتیبان استفاده کنید.</p></div>`}
+else{A.innerHTML=`<div class="card"><b>افزودن آیتم</b><br><input id="nc" placeholder="دسته" list="cl"><datalist id="cl">${cats().map(c=>`<option>${c}`).join('')}</datalist> <input id="nn" placeholder="نام"> <input id="np" type="number" placeholder="قیمت (تومان)"> <button class="bt" onclick="addM()">افزودن</button></div>
+<div class="card">${D.m.map(x=>`<div class="ln"><span>${x.c} ‹ ${x.n}</span><input type="number" value="${x.p}" style="width:110px" onchange="upM(${x.i},this.value)"><button onclick="dlM(${x.i})">✕</button></div>`).join('')}</div>`}}
+function upM(i,v){D.m.find(x=>x.i==i).p=+v||0;sv()}
+function addM(){const c=$('#nc').value.trim(),n=$('#nn').value.trim();if(!c||!n)return;D.m.push({i:Math.max(0,...D.m.map(x=>x.i))+1,c,n,p:+$('#np').value||0});sv();render()}
+function bk(){sf('golestan-backup.json',JSON.stringify(D))}
+function rs(f){if(!f)return;const r=new FileReader();r.onload=()=>{try{D=JSON.parse(r.result);sv();render()}catch(e){info('فایل نامعتبر است')}};r.readAsText(f)}
+let R=null;
+function invHTML(r){const d=new Date(r.at),n=r.s-r.d,o="<div class='orn'>❁ ━━━━ ❖ ━━━━ ❁</div>";
+return `<div class='iv'><div class='fr'><i class='c c1'>❖</i><i class='c c2'>❖</i><i class='c c3'>❖</i><i class='c c4'>❖</i><div class='hd'>${o}<h2>رستوران سنتی گلستان</h2><div class='sb'>لذت طعم اصیل غذاهای ایرانی</div><div class='tt'>${r.m?'فاکتور فروش':'پیش‌فاکتور'}</div></div>
+<div class='mt'><span>شماره: <b>${F(r.no)}</b></span><span>میز: <b>${F(r.t)}</b></span><span>تاریخ: <b>${d.toLocaleDateString('fa-IR')}</b></span><span>ساعت: <b>${d.toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'})}</b></span></div>
+<table class='it2'><tr><th>ردیف</th><th>شرح</th><th>تعداد</th><th>فی (تومان)</th><th>مبلغ (تومان)</th></tr>${r.l.map((l,k)=>`<tr><td>${F(k+1)}</td><td class='nm'>${l.n}</td><td>${F(l.q)}</td><td>${F(l.p)}</td><td>${F(l.q*l.p)}</td></tr>`).join('')}</table>
+<div class='sm'><div><span>جمع کل</span><b>${F(r.s)}</b></div>${r.d?`<div><span>تخفیف</span><b>${F(r.d)}</b></div>`:''}<div class='fn'><span>مبلغ قابل پرداخت</span><span>${F(n)} تومان</span></div></div>${r.m?`<div class='pm'>نحوه پرداخت: ${r.m}${r.nm?' — '+r.nm:''}</div>`:''}
+<div class='ft'>${o}از حضور گرم شما سپاسگزاریم<br><small>اینستاگرام: golestan9688</small></div></div></div>`}
+function pr(r){R=r;$('#ov')?.remove();const o=document.createElement('div');o.id='ov';o.innerHTML=`<div class='mb'><div class='bar'><button class='bt g2' id='pb' onclick='pdf()'>📄 دریافت PDF</button>${NAT?'':`<button class='bt s' onclick='prt()'>🖨 چاپ</button>`}<button class='bt' onclick="$('#ov').remove()">✕ بستن</button></div><div style='zoom:${Math.min(1,(innerWidth-20)/560)}'>${invHTML(r)}</div></div>`;document.body.append(o)}
+function prt(){$('#inv').innerHTML=invHTML(R);window.print()}
+async function pdf(){const b=$('#pb'),t=b.textContent;b.textContent='در حال ساخت…';const c=document.createElement('div');c.style.cssText='position:fixed;left:-9999px;top:0;width:560px';c.innerHTML=invHTML(R);document.body.append(c);
+try{await Promise.all([document.fonts.load('38px Lalezar','رستوران'),document.fonts.load('700 13px Vazirmatn','رستوران')]);const cv=await html2canvas(c.firstChild,{scale:2,backgroundColor:'#f3e1b4'}),w=148,h=w*cv.height/cv.width,p=new window.jspdf.jsPDF({unit:'mm',format:[w,Math.max(h,100)]});p.addImage(cv.toDataURL('image/jpeg',.95),'JPEG',0,0,w,h);await sf('invoice-'+R.no+'.pdf',p.output('blob'))}catch(e){if(!e||e.code!='declined')info('خطا در ساخت PDF')}
+c.remove();b.textContent=t}
+const nt=x=>x.s-x.d,fd=x=>new Date(typeof x=='string'?x+'T12:00':x).toLocaleDateString('fa-IR',{weekday:'long',day:'numeric',month:'long',year:'numeric'}),ft=x=>new Date(x).toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'}),dayRecs=d=>D.h.filter(x=>x.day==d);
+function dlg(h){dx();const o=document.createElement('div');o.id='dl';o.innerHTML=`<div class='dlb'>${h}</div>`;document.body.append(o)}
+function dx(){$('#dl')?.remove()}
+function info(m){dlg(`<div>${m}</div><div class='bar'><button class='bt' onclick='dx()'>باشه</button></div>`)}
+function ask(m,f){dlg(`<b>${m}</b><div class='bar'><button class='bt' id='ay'>بله</button><button class='bt s' onclick='dx()'>انصراف</button></div>`);$('#ay').onclick=()=>{dx();f()}}
+function fin(m,nm){if(!D.o[T])return;const r=cur();r.m=m;r.day=td();if(nm)r.nm=nm;D.h.push(r);D.n++;delete D.o[T];delete D.d[T];sv();go('t');pr(r)}
+function pay(m){fin(m)}
+function nas(){if(!D.o[T])return;dlg(`<b>ثبت نسیه — میز ${F(T)}</b><input id='n1' placeholder='نام'><input id='n2' placeholder='نام خانوادگی'><div class='bar'><button class='bt g2' onclick='nok()'>ثبت نسیه</button><button class='bt s' onclick='dx()'>انصراف</button></div>`)}
+function nok(){const a=$('#n1').value.trim(),b=$('#n2').value.trim();if(!a||!b){$('#n1').style.borderColor='#c00';$('#n2').style.borderColor='#c00';return}dx();fin('نسیه',a+' '+b)}
+function clr(){if(!D.o[T]){go('t');return}ask('سفارش این میز لغو و خالی شود؟ (در گزارش روز ثبت می‌شود)',()=>{const r=cur();r.v=1;r.m='لغو';r.no=0;r.day=td();D.h.push(r);delete D.o[T];delete D.d[T];sv();go('t')})}
+function dlM(i){ask('این آیتم حذف شود؟',()=>{D.m=D.m.filter(x=>x.i!=i);sv();render()})}
+function stats(d){const a=dayRecs(d),iv=a.filter(x=>!x.v),vd=a.filter(x=>x.v),f=m=>iv.filter(x=>x.m==m).reduce((s,x)=>s+nt(x),0),rc=D.h.filter(x=>x.pd&&x.pd.day==d),it={};iv.forEach(x=>x.l.forEach(l=>{const e=it[l.n]||(it[l.n]={q:0,a:0});e.q+=l.q;e.a+=l.q*l.p}));return{iv,vd,rc,it,rk:rc.reduce((s,x)=>s+nt(x),0),cash:f('نقد'),card:f('کارت'),nas:f('نسیه'),sale:iv.reduce((s,x)=>s+nt(x),0)}}
+function sumR(s){return[['جمع فروش روز',s.sale],['فروش نقدی',s.cash],['فروش کارتی',s.card],['فروش نسیه',s.nas],['وصول نسیه',s.rk],['جمع دریافتی روز',s.cash+s.card+s.rk]]}
+const top=s=>Object.entries(s.it).sort((a,b)=>b[1].a-a[1].a);
+function od(d){if(!d)return;RD=d;V='r';render();scrollTo(0,0)}
+function dayV(){const s=stats(RD),ds=n=>{const x=new Date(RD+'T12:00');x.setDate(x.getDate()+n);return x.toLocaleDateString('en-CA')};
+return `<div class='card'><div class='bar'><button class='bt s' data-d='${ds(-1)}' onclick='od(this.dataset.d)'>روز قبل</button><input type='date' value='${RD}' onchange='od(this.value)'><button class='bt s' data-d='${ds(1)}' onclick='od(this.dataset.d)'>روز بعد</button></div><div class='tot' style='justify-content:center'>${fd(RD)}</div></div>
+<div class='card'><table>${sumR(s).map(([n,v])=>`<tr><td>${n}</td><td><b>${F(v)}</b></td></tr>`).join('')}<tr><td>تعداد فاکتور / لغو</td><td>${F(s.iv.length)} / ${F(s.vd.length)}</td></tr></table></div>
+<div class='card'><b>فاکتورهای روز</b><div style='overflow-x:auto'><table>${s.iv.map(x=>`<tr><td>#${F(x.no)}</td><td>میز ${F(x.t)}</td><td>${ft(x.at)}</td><td>${F(nt(x))}</td><td>${x.m}${x.nm?' — '+x.nm:''}</td><td><button class='q' data-a='${x.at}' onclick='pr(D.h.find(z=>z.at==this.dataset.a))'>📄</button></td></tr>`).join('')}${s.vd.map(x=>`<tr style='opacity:.55'><td>لغو</td><td>میز ${F(x.t)}</td><td>${ft(x.at)}</td><td>${F(nt(x))}</td><td colspan='2'>${x.l.map(l=>l.n+'×'+l.q).join('، ')}</td></tr>`).join('')||''}${s.iv.length+s.vd.length?'':'<tr><td>فاکتوری ثبت نشده</td></tr>'}</table></div></div>
+${s.rc.length?`<div class='card'><b>وصول نسیه این روز</b><table>${s.rc.map(x=>`<tr><td>${x.nm}</td><td>${fd(x.day)}</td><td>${F(nt(x))}</td><td>${x.pd.m}</td></tr>`).join('')}</table></div>`:''}
+<div class='card'><b>اقلام فروخته‌شده</b><table>${top(s).map(([n,e])=>`<tr><td>${n}</td><td>${F(e.q)}</td><td>${F(e.a)}</td></tr>`).join('')||'<tr><td>—</td></tr>'}</table></div>
+<div class='bar'><button class='bt g2' onclick='csv(RD)'>⬇ خروجی اکسل</button><button class='bt' id='dp' onclick='dpdf(RD)'>📄 خروجی PDF</button></div>`}
+function daysV(){const ds=[...new Set(D.h.map(x=>x.day).concat(D.h.filter(x=>x.pd).map(x=>x.pd.day)))].sort().reverse();
+return `<div class='card bar'><button class='bt g2' onclick='csv()'>⬇ اکسل همه روزها</button><button class='bt s' onclick='bk()'>نسخه پشتیبان</button><label class='bt s'>بازیابی<input type='file' hidden accept='.json' onchange='rs(this.files[0])'></label></div>`+(ds.map(d=>{const s=stats(d);return `<div class='card ln' style='cursor:pointer' data-d='${d}' onclick='od(this.dataset.d)'><span><b>${fd(d)}</b><br><small>${F(s.iv.length)} فاکتور — نسیه ${F(s.nas)} — دریافتی ${F(s.cash+s.card+s.rk)}</small></span><b>${F(s.sale)}</b></div>`}).join('')||'<p>هنوز روزی ثبت نشده</p>')}
+function nasV(){const u=D.h.filter(x=>x.m=='نسیه'&&!x.pd),g={};u.forEach(x=>(g[x.nm]||(g[x.nm]=[])).push(x));
+return `<div class='card'><div class='tot'><span>جمع نسیه‌ها</span><span>${F(u.reduce((s,x)=>s+nt(x),0))}</span></div></div>`+(Object.keys(g).map(n=>`<div class='card'><div class='tot'><span>👤 ${n}</span><span>${F(g[n].reduce((s,x)=>s+nt(x),0))}</span></div>${g[n].map(x=>`<div class='ln'><span>${fd(x.day)} — میز ${F(x.t)} — ${F(nt(x))}</span><button class='bt g2' data-a='${x.at}' onclick='rcv(this.dataset.a,1)'>نقد</button><button class='bt g2' data-a='${x.at}' onclick='rcv(this.dataset.a,2)'>کارت</button><button class='q' data-a='${x.at}' onclick='pr(D.h.find(z=>z.at==this.dataset.a))'>📄</button></div>`).join('')}</div>`).join('')||'<p style="text-align:center">نسیه‌ای ثبت نشده</p>')}
+function rcv(a,k){const x=D.h.find(z=>z.at==a);ask('دریافت '+F(nt(x))+' تومان از '+x.nm+'؟',()=>{x.pd={at:Date.now(),day:td(),m:['','نقد','کارت'][k]};sv();render()})}
+const NAT=!!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform());
+async function sf(fn,data){try{if(NAT){const{Filesystem,Share}=Capacitor.Plugins;const b64=await new Promise((ok,no)=>{if(typeof data=='string'){ok(btoa(unescape(encodeURIComponent(data))));return}const r=new FileReader();r.onload=()=>ok(r.result.split(',')[1]);r.onerror=no;r.readAsDataURL(data)});const w=await Filesystem.writeFile({path:fn,data:b64,directory:'CACHE'});await Share.share({title:fn,files:[w.uri],dialogTitle:fn})}else{const b=data instanceof Blob?data:new Blob([data],{type:'text/plain;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download=fn;document.body.append(a);a.click();setTimeout(()=>{a.remove();URL.revokeObjectURL(a.href)},1500)}}catch(e){if(!/cancel|dismiss/i.test((e&&e.message)||''))info('ذخیره فایل انجام نشد')}}
+const HD=['تاریخ','شماره','میز','ساعت','جمع','تخفیف','قابل پرداخت','نحوه پرداخت','نام (نسیه)','وصول نسیه','اقلام'];
+function csv(d){const l=d?dayRecs(d):D.h;sf('golestan-'+(d||'all')+'.csv','\ufeff'+[HD,...l.map(x=>[new Date(x.at).toLocaleDateString('fa-IR'),x.v?'لغو':x.no,x.t,ft(x.at),x.s,x.d,x.v?0:nt(x),x.m,x.nm||'',x.pd?x.pd.m+' '+x.pd.day:'',x.l.map(z=>z.n+'×'+z.q).join(' | ')])].map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\r\n'))}
+function dayHTML(d){const s=stats(d),t=a=>a.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join(''),h=x=>`<div style='font:22px Lalezar,Vazirmatn,serif;color:#7b1e1e;margin:14px 0 4px'>${x}</div>`;
+return `<div class='iv' style='width:760px'><div class='fr'><i class='c c1'>❖</i><i class='c c2'>❖</i><i class='c c3'>❖</i><i class='c c4'>❖</i><div class='hd'><h2>گزارش حساب روز</h2><div class='sb'>رستوران سنتی گلستان — ${fd(d)}</div></div>${h('خلاصه حساب')}<table class='it2'>${t(sumR(s).map(([n,v])=>[n,F(v)+' تومان']))}</table>${h('فاکتورها')}<table class='it2'><tr><th>شماره</th><th>میز</th><th>ساعت</th><th>مبلغ</th><th>پرداخت</th></tr>${t(s.iv.map(x=>[F(x.no),F(x.t),ft(x.at),F(nt(x)),x.m+(x.nm?' — '+x.nm:'')]))}</table>${s.rc.length?h('وصول نسیه')+`<table class='it2'>${t(s.rc.map(x=>[x.nm,fd(x.day),F(nt(x)),x.pd.m]))}</table>`:''}${h('اقلام فروخته‌شده')}<table class='it2'><tr><th>شرح</th><th>تعداد</th><th>مبلغ</th></tr>${t(top(s).map(([n,e])=>[n,F(e.q),F(e.a)]))}</table></div></div>`}
+async function dpdf(d){const b=$('#dp'),bt=b.textContent;b.textContent='در حال ساخت…';const c=document.createElement('div');c.style.cssText='position:fixed;left:-9999px;top:0;width:760px';c.innerHTML=dayHTML(d);document.body.append(c);
+try{await Promise.all([document.fonts.load('38px Lalezar','رستوران'),document.fonts.load('700 13px Vazirmatn','رستوران')]);const cv=await html2canvas(c.firstChild,{scale:2,backgroundColor:'#f3e1b4'}),w=210,h=w*cv.height/cv.width,p=new window.jspdf.jsPDF({unit:'mm',format:[w,Math.max(h,100)]});p.addImage(cv.toDataURL('image/jpeg',.95),'JPEG',0,0,w,h);await sf('golestan-'+d+'.pdf',p.output('blob'))}catch(e){info('خطا در ساخت PDF')}
+c.remove();b.textContent=bt}
+render();
+if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
+</script></body></html>
